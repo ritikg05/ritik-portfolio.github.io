@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Temprature Converture</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+    .box1{
+        margin: 20%;
+        padding: 20px;
+        background-color: antiquewhite;
+    }
+    .head1{
+        color: #d400ff;
+    }
+    .line1{
+        color: rgba(206, 72, 15, 0.97)
+    }
+    .line2{
+        color: rgb(192, 17, 96);
+    }
+    .button{
+        background-color: rgb(231, 209, 183);
+        border: none;
+        color: rgb(76, 84, 24);
+    }
+    body{
+        background-color: aquamarine;
+    }
+    </style>
+  </head>
+  <body>
+    <div class="box1">
+      <h3 class="head1 box">Tamrature Converture</h3>
+      <label class="line1" id="labelC">Enter Temprature</label>
+      <input type="number" id="inputC" placeholder="in ℃"/><br />
+      <label class="line2">The value in fahrenheit is</label>
+      <label id="ans"></label><br />
+      <button type="submit" class="button" id="btn">Submit</button>
+    </div>
+    <script>
+            const inputC = document.getElementById('inputC').value;
+            var btn = document.getElementById('btn');
+            var ans = document.getElementById('ans');
+            function a()
+            {
+                let fahrenheit = (inputC*1.8)+32;
+                console.log(fahrenheit);
+                ans.innerHTML = fahrenheit;
+            }
+            btn.addEventListener('click',a);
+    </script>
+  </body>
+</html>
